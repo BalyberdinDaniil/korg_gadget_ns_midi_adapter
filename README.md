@@ -1,12 +1,12 @@
 # MIDI-to-HID Adapter for "Korg Gadget for Nintendo Switch"™
 
-A specialized bridge that allows you to play **Korg Gadget for Nintendo Switch** using any standard MIDI controller. It converts MIDI notes into HID keyboard strokes with low latency and includes hardware configuration options.
+A specialized bridge that allows you to play **Korg Gadget for Nintendo Switch** using any standard MIDI controller. It converts MIDI notes into HID keyboard strokes with low latency.
 
 ## Features
 - **Plug & Play:** Recognized by Nintendo Switch as a standard USB Keyboard.
+- **Hardware Channel Select:** Use 4 DIP-switches to set the MIDI channel (1-16) on startup.
 - **Musical Mapping:** Full support for the Gadget keyboard layout (Z-M, Q-I, 9-P).
 - **Octave Control:** Dedicated MIDI notes to switch octaves within the Gadget interface.
-- **Hardware Channel Select:** Use 4 DIP-switches to set the MIDI channel (1-16) on startup.
 - **Panic Button:** Dedicated MIDI note to release all stuck keys.
 
 ## Hardware Requirements
@@ -48,14 +48,14 @@ The MIDI channel is determined at startup by the state of pins 2, 3, 4, and 5.
 The adapter maps MIDI notes to the Gadget keyboard in the following range:
 - **MIDI Notes:** `60` — `88`
 - **Notation:** `C3` — `E5`
-- **Keyboard Layout:** Mapped to keys `Z` through `P` (including numbers for sharps).
+- **Keyboard Layout:** Mapped to keys `Z` through `P` ([read more in the manual](https://www.detune.co.jp/KORG_Gadget_User_Manual_en.html#usbkbd)).
 
 *Notes outside this range are ignored unless they are System Commands (90, 92, 94).*
 
 ## System Commands (MIDI Notes)
-- **Note 90:** Switch Octave Down (Ctrl + Left Arrow)
-- **Note 92:** Switch Octave Up (Ctrl + Right Arrow)
-- **Note 94:** Emergency Release All Keys
+- **Note 90 (F#5):** Switch Octave Down (Ctrl + Left Arrow)
+- **Note 92 (G#5):** Switch Octave Up (Ctrl + Right Arrow)
+- **Note 94 (A#5):** Emergency Release All Keys
 
 ## Installation
 1. Install the [HID-Project](https://github.com/NicoHood/HID) and [Arduino MIDI Library](https://github.com/FortySevenEffects/arduino_midi_library) in your Arduino IDE.
