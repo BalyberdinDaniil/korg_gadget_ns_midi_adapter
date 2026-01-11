@@ -17,7 +17,12 @@ A specialized bridge that allows you to play **Korg Gadget for Nintendo Switch**
 ## MIDI Channel Selection (DIP Switches)
 
 The MIDI channel is determined at startup by the state of pins 2, 3, 4, and 5. 
-**Note:** `OFF` means the pin is HIGH (internal pull-up), `ON` means the pin is connected to **GND**.
+
+**Note:** 
+
+`OFF` means the pin is HIGH (internal pull-up), 
+
+`ON` means the pin is connected to **GND**.
 
 | Switch 1 (Pin 2) | Switch 2 (Pin 3) | Switch 3 (Pin 4) | Switch 4 (Pin 5) | MIDI Channel |
 | :--- | :--- | :--- | :--- | :--- |
