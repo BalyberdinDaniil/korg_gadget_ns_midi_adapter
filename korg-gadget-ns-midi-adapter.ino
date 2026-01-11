@@ -5,7 +5,7 @@
   Date: January 11, 2026
   Author: Balyberdin Daniil
   License: MIT
-  Github source: https://github.com/BalyberdinDaniil/korg_gadget_ns_midi_adapter/tree/main
+  Github source: https://github.com/BalyberdinDaniil/korg_gadget_ns_midi_adapter
 */
 
 #include <MIDI.h>
